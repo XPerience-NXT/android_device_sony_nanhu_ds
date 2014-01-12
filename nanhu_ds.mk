@@ -26,8 +26,8 @@ $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 PRODUCT_PACKAGES += \
-    FM \
-    OTAUpdateCenter
+    FM 
+#    OTAUpdateCenter
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -80,6 +80,9 @@ PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
     device/sony/nanhu_ds/config/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
     device/sony/nanhu_ds/config/cy8ctma340_touch.kl:system/usr/keylayout/cy8ctma340_touch.kl
+
+
+#for single sim remove this     persist.multisim.config=dsds 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.multisim.config=dsds \
