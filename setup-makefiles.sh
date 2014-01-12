@@ -49,7 +49,7 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
 done
 
 (cat << EOF) > ../../../$OUTDIR/$DEVICE-vendor.mk
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2014 AnimeROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -69,7 +69,7 @@ done
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2014 AnimeROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
