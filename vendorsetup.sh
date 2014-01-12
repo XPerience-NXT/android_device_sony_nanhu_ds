@@ -1,2 +1,2 @@
-add_lunch_combo cm_nanhu_ds-eng
-add_lunch_combo cm_nanhu_ds-userdebug
+add_lunch_combo anime_nanhu_ds-eng
+add_lunch_combo anime_nanhu_ds-userdebug
