@@ -39,7 +39,7 @@
     "repository":"TamsuiCM11/android_hardware_qcom_audio-legacy",
     "target_path": "hardware/qcom/audio-legacy",
     "branch": "cm-11.0"
-},,
+},
 {   "remote" : "http://github.com/" ,
     "repository":"TamsuiCM11/android_hardware_qcom_media-legacy,
     "target_path": "hardware/qcom/media-legacy",
