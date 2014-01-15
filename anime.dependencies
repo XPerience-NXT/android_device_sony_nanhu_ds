@@ -1,49 +1,32 @@
  [
 {
-    "remote" : "http://github.com/" ,
-    "repository":"CyanogenMod/android_hardware_atheros_wlan",
-    "target_path": "hardware/atheros/wlan",
-    "branch": "jellybean"
+    "repository":"android_hardware_atheros",
+    "target_path": "hardware/atheros",
+    "branch": "master"
 },
-{   "remote" : "http://github.com/" ,
+{   "remote" : "github",
     "repository":"hsr0/android_vendor_sony_nanhu_ds",
     "target_path": "vendor/sony/nanhu_ds",
     "branch": "cm-11.0"
 },
-{   "remote" : "http://github.com/" ,
-    "repository":"AnimeROM/android_device_sony_tamsui-common",
+{   "remote" : "github" ,
+    "repository":"android_device_sony_tamsui-common",
     "target_path": "device/sony/tamsui-common",
-    "branch": "android-4.4"
-},
-{   "remote" : "http://github.com/" ,
-    "repository":"AnimeROM/android_kernel_sony_msm7x27a-nanhu",
+    
+    },
+{
+    "repository":"android_kernel_sony_msm7x27a-nanhu",
     "target_path": "kernel/sony/msm7x27a",
     "branch": "android-4.4"
 },
-{   "remote" : "http://github.com/" ,
+{   "remote" : "github",
     "repository":"CyanogenMod/android_device_sony_qcom-common",
     "target_path": "device/sony/qcom-common",
     "branch": "cm-11.0"
 },
-{   "remote" : "http://github.com/" ,
+{   "remote" : "github",
     "repository":"CyanogenMod/android_device_sony_common",
     "target_path": "device/sony/common",
     "branch": "cm-11.0"
-},
-{   "remote" : "http://github.com/" ,
-    "repository":"TamsuiCM11/android_hardware_qcom_display-legacy",
-    "target_path": "hardware/qcom/display-legacy",
-    "branch": "cm-11.0"
-},
-{   "remote" : "http://github.com/" ,
-    "repository":"TamsuiCM11/android_hardware_qcom_audio-legacy",
-    "target_path": "hardware/qcom/audio-legacy",
-    "branch": "cm-11.0"
-},
-{   "remote" : "http://github.com/" ,
-    "repository":"TamsuiCM11/android_hardware_qcom_media-legacy,
-    "target_path": "hardware/qcom/media-legacy",
-    "branch": "cm-11.0"
 }
-
  ]
