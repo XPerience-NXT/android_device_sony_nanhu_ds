@@ -6,7 +6,7 @@
 
 TARGET_SPECIFIC_HEADER_PATH += device/sony/nanhu_ds/include
 
-TARGET_KERNEL_SOURCE := kernel/sony/nanhu_ds
+TARGET_KERNEL_SOURCE := kernel/sony/msm7x27a
 TARGET_KERNEL_CONFIG := anime_nanhu_defconfig
 BOARD_KERNEL_CMDLINE := device/sony/nanhu_ds/config/cmdline.txt
 
@@ -36,16 +36,23 @@ TARGET_CUSTOM_BLUEDROID := ../../../device/sony/nanhu_ds/bluedroid/bluetooth.c
 
 # Wifi
 #BOARD_HAVE_QCOM_FM := true
-BOARD_HAS_ATH_WLAN := true
-BOARD_WLAN_DEVICE := ath6kl
+#BOARD_HAS_ATH_WLAN :=               true
+#BOARD_WLAN_DEVICE :=                ath6kl
+#WPA_SUPPLICANT_VERSION :=           VER_0_8_X
+#BOARD_HOSTAPD_DRIVER :=             NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB :=        lib_driver_cmd_ath6kl
+#BOARD_WPA_SUPPLICANT_DRIVER :=      NL80211
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_ath6kl
+#WIFI_DRIVER_MODULE_PATH :=          "/system/lib/modules/ath6kl_sdio.ko"
+#WIFI_DRIVER_MODULE_NAME :=          wlan
+#WIFI_DRIVER_LOADER_DELAY :=         1000000
+
+# WIFI
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_ath6kl
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_ath6kl
-WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/ath6kl_sdio.ko"
-WIFI_DRIVER_MODULE_NAME := wlan
-WIFI_DRIVER_LOADER_DELAY := 1000000
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_TI_SOFTAP := true
+
 
 BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p17
 
