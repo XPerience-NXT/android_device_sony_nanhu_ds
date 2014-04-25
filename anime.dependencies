@@ -1,0 +1,32 @@
+ [
+{
+    "repository":"android_hardware_atheros",
+    "target_path": "hardware/atheros",
+    "branch": "master"
+},
+{   "remote" : "github",
+    "repository":"hsr0/android_vendor_sony_nanhu_ds",
+    "target_path": "vendor/sony/nanhu_ds",
+    "branch": "cm-11.0"
+},
+{   "remote" : "github" ,
+    "repository":"android_device_sony_tamsui-common",
+    "target_path": "device/sony/tamsui-common",
+    
+    },
+{
+    "repository":"android_kernel_sony_msm7x27a-nanhu",
+    "target_path": "kernel/sony/msm7x27a",
+    "branch": "android-4.4"
+},
+{   "remote" : "github",
+    "repository":"CyanogenMod/android_device_sony_qcom-common",
+    "target_path": "device/sony/qcom-common",
+    "branch": "cm-11.0"
+},
+{   "remote" : "github",
+    "repository":"CyanogenMod/android_device_sony_common",
+    "target_path": "device/sony/common",
+    "branch": "cm-11.0"
+}
+ ]

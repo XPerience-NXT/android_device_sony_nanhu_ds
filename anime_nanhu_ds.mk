@@ -1,10 +1,10 @@
 $(call inherit-product, device/sony/nanhu_ds/full_nanhu_ds.mk)
 
 # Inherit CM common GSM stuff.
-$(call inherit-product, vendor/anime/config/gsm.mk)
+$(call inherit-product, vendor/Anime/config/gsm.mk)
 
 # Inherit CM common Phone stuff.
-$(call inherit-product, vendor/anime/config/common.mk)
+$(call inherit-product, vendor/Anime/config/common.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=C1604_1270-7235 BUILD_FINGERPRINT=Sony/C1604_1270-7235/C1604:4.1.1/11.3.A.2.1/20130409.185106:user/release-keys PRIVATE_BUILD_DESC="C1604-user 4.1.1 JRO03L 20130409.185106 test-keys"
 

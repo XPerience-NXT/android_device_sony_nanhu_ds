@@ -25,9 +25,9 @@ $(call inherit-product, device/sony/tamsui-common/tamsui.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-PRODUCT_PACKAGES += \
-    FM 
-#    OTAUpdateCenter
+#PRODUCT_PACKAGES += \
+#    FM \
+#    init.qcom.fm.sh
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -40,10 +40,9 @@ PRODUCT_AAPT_PREF_CONFIG := mdpi
 # Configuration scripts
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/audio_policy.conf:system/etc/audio_policy.conf \
-    device/sony/nanhu_ds/config/main.conf:system/etc/bluetooth/main.conf \
     device/sony/nanhu_ds/config/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/sony/nanhu_ds/config/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/sony/nanhu_ds/config/init.device.rc:root/init.device.rc \
+    device/sony/nanhu_ds/config/init.recovery.device.rc:root/init.recovery.device.rc \
     device/sony/nanhu_ds/../tamsui-common/prebuilt/logo_M.rle:root/logo.rle
 
 # USB function switching
@@ -56,9 +55,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/sony/nanhu_ds/config/vold.fstab:system/etc/vold.fstab
 
+PRODUCT_COPY_FILES += \
+    device/sony/nanhu_ds/config/init.bluetooth.sh:system/etc/init.bluetooth.sh
+
+PRODUCT_PACKAGES += \
+    hciattach
+
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
-    device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device
+    device/sony/nanhu_ds/recovery/bootrec-device:recovery/bootrec-device \
+    device/sony/nanhu_ds/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
+    device/sony/nanhu_ds/recovery/rebootrecovery.sh:recovery/root/sbin/rebootrecovery.sh
+
+PRODUCT_COPY_FILES += \
+    device/sony/nanhu_ds/prebuilt/tad:root/sbin/tad
+
 
 # Offline charging
 PRODUCT_COPY_FILES += \
@@ -85,14 +96,10 @@ PRODUCT_COPY_FILES += \
 #for single sim remove this     persist.multisim.config=dsds 
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.multisim.config=dsds \
-    persist.radio.eons.enabled=true \
-    ro.arima.imeisv=45 \
-    ro.vendor.extension_library=/system/lib/libqc-opt.so \
-    ro.telephony.call_ring.multiple=false \
-    persist.sys.strictmode.visual=0 \
-    persist.sys.strictmode.disable=1 \
-    persist.radio.apm_sim_not_pwdn=0 \
+    ro.telephony.ril.v3=skipnullaid,qcomdsds \
+    ro.webview.gralloc_unbind=1 \
+    ro.fm.analogpath.supported=true \
+    ro.fm.mulinst.recording.support=false \
+    persist.radio.multisim.config=dsds
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
-
